@@ -333,7 +333,7 @@ const App = {
       const w = 600, h = 700;
       const l = window.screenX + (window.outerWidth - w) / 2;
       const t = window.screenY + (window.outerHeight - h) / 2;
-      const popup = window.open(authUrl, 'yt-oauth', `width=${w},height=${h},left=${l},top=${t}`);
+      window.location.href = authUrl;
 
       if (!popup) {
         return UI.status('connectStatus', 'Popup blocked! Browser mein popup allow karo.', 'error');
